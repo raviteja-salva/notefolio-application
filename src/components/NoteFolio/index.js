@@ -52,9 +52,9 @@ const NoteFoilo = () => {
   }
 
   const emptyView = () => (
-    <div className='empty-view'>
-      <img src='https://assets.ccbp.in/frontend/react-js/jobby-app-not-found-img.png' />
-      <p className='empty-view-paragraph'>
+    <div className="empty-view">
+      <img src="https://assets.ccbp.in/frontend/react-js/jobby-app-not-found-img.png" />
+      <p className="empty-view-paragraph">
         Your list is clear! Add some notes to get started, or take a
         well-deserved break from your conquering ways.
       </p>
@@ -67,7 +67,7 @@ const NoteFoilo = () => {
     }
 
     return (
-      <ul className='todo-items-container' id='todoItemsContainer'>
+      <ul className="todo-items-container" id="todoItemsContainer">
         {noteList.map(eachNote => (
           <NoteItem
             key={eachNote.id}
@@ -80,47 +80,47 @@ const NoteFoilo = () => {
   }
 
   return (
-    <div className='todos-bg-container'>
-      <h1 className='todos-heading'>NoteFoilo</h1>
-      <h1 className='create-task-heading'>
-        Add <span className='create-task-heading-subpart'>Note</span>
+    <div className="todos-bg-container">
+      <h1 className="todos-heading">NoteFoilo</h1>
+      <h1 className="create-task-heading">
+        Add <span className="create-task-heading-subpart">Note</span>
       </h1>
-      <div className='note-input-container'>
-        <label className='input-labels' htmlFor='title'>
+      <div className="note-input-container">
+        <label className="input-labels" htmlFor="title">
           Title
         </label>
         <input
-          type='text'
+          type="text"
           value={titleUserInput}
-          className='todo-user-input'
-          placeholder='Give your note title'
+          className="todo-user-input"
+          placeholder="Give your note title"
           onChange={changeTitleUserInput}
-          id='title'
+          id="title"
         />
       </div>
-      <div className='note-input-container'>
-        <label className='input-labels' htmlFor='description'>
+      <div className="note-input-container">
+        <label className="input-labels" htmlFor="description">
           Description
         </label>
         <textarea
-          type='text'
+          type="text"
           value={descUserInput}
-          className='todo-user-input'
+          className="todo-user-input"
           placeholder="Write what's on your mind..."
           onChange={changeDescUserInput}
-          id='description'
-          cols='100'
-          rows='5'
+          id="description"
+          cols="100"
+          rows="5"
         />
       </div>
-      <button className='button' onClick={onAddNoteItem}>
+      <button className="button" onClick={onAddNoteItem}>
         Add
       </button>
-      <h1 className='todo-items-heading'>
-        My <span className='todo-items-heading-subpart'>Notes</span>
+      <h1 className="todo-items-heading">
+        My <span className="todo-items-heading-subpart">Notes</span>
       </h1>
       {noteItemsList()}
-      <button className='button' onClick={onClickSaveButton}>
+      <button className="button" onClick={onClickSaveButton}>
         Save
       </button>
     </div>
